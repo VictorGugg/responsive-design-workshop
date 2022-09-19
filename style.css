@@ -1,5 +1,11 @@
+@font-face {
+    font-family: "Verdana-Custom";
+    src: url("./assets/fonts/verdana/verdana.ttf") format("truetype"), url("./assets/fonts/verdana/VERDANA0.TTF") format("truetype"), url("./assets/fonts/verdana/Verdana\ Bold.ttf") format("truetype"), url("./assets/fonts/verdana/verdanab.ttf") format("truetype"); 
+  }
+
 * {
     box-sizing: border-box;
+    font-family: "Verdana", "Verdana-Custom", sans-serif;
     margin: 0;
     line-height: 1.5rem;
 }
@@ -12,13 +18,17 @@ h2 {
     margin: 1rem 2rem;
 }
 
+section {
+    width: 60%;
+    margin: auto;
+    margin-bottom: 1rem;
+}
+
 .featuredPosts {
     display: grid;
-    width: 60%;
     height: auto;
-    margin: auto;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(3, 110px);
+    grid-template-rows: 4rem repeat(2, 110px);
     grid-template-areas:
     "title title" 
     "main main"
@@ -72,10 +82,16 @@ article h3 {
     margin-left: 5%;
 }
 
+footer {
+    margin-top: 40px;
+    background-color: #f76c6c;
+    padding: 1rem 0.5rem;
+}
+
 @media screen and (min-width: 1200px) {
     .featuredPosts {
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(3, 110px);
+        grid-template-rows: 4 rem repeat(2, 110px);
         grid-template-areas: 
         "title title title title"
         "main main b c"
